@@ -27,3 +27,4 @@ jobs:
           service-routes: "/:2000"
           git-builder: docker
           git-docker-dockerfile: Dockerfile.koyeb
+          privileged: true
