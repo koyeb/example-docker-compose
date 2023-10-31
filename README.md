@@ -56,7 +56,8 @@ On the [Koyeb Control Panel](//app.koyeb.com/apps), click the **Create App** but
 3. Specify the branch to deploy, in this case `main`
 4. Set the `Dockerfile location` to `Dockerfile.koyeb`
 5. Set the `privileged` flag
-6. Then, give your App a name, i.e `docker-compose-on-koyeb`, and click **Create App.**
+6. Expose the port `2000` instead of the default one. The port `2000` matches the one specified in [docker-compose.yaml](docker-compose.yaml)
+7. Then, give your App a name, i.e `docker-compose-on-koyeb`, and click **Create App.**
 
 You land on the deployment page where you can follow the build of your docker-compose application. Once the build is completed, your application is being deployed and you will be able to access it via `<YOUR_APP_NAME>-<YOUR_ORG_NAME>.koyeb.app`.
 
