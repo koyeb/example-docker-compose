@@ -36,7 +36,7 @@ You need a Koyeb account to successfully deploy and run this application. If you
 
 The fastest way to deploy the docker-compose application is to click the **Deploy to Koyeb** button below.
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=docker-compose-on-koyeb&privileged=true&type=git&repository=koyeb%2Fexample-docker-compose&branch=main&builder=dockerfile&dockerfile=Dockerfile.koyeb&ports=2000%3Bhttp%3B%2F)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=docker-compose-on-koyeb&privileged=true&type=git&repository=koyeb/example-docker-compose&branch=main&builder=dockerfile&dockerfile=Dockerfile.koyeb)
 
 Clicking on this button brings you to the Koyeb App creation page with everything pre-set to launch this application.
 
@@ -56,8 +56,7 @@ On the [Koyeb Control Panel](//app.koyeb.com/apps), click the **Create App** but
 3. Specify the branch to deploy, in this case `main`
 4. Set the `Dockerfile location` to `Dockerfile.koyeb`
 5. Set the `privileged` flag
-6. Expose the port `2000` instead of the default one. The port `2000` matches the one specified in [docker-compose.yaml](docker-compose.yaml)
-7. Then, give your App a name, i.e `docker-compose-on-koyeb`, and click **Create App.**
+6. Then, give your App a name, i.e `docker-compose-on-koyeb`, and click **Create App.**
 
 You land on the deployment page where you can follow the build of your docker-compose application. Once the build is completed, your application is being deployed and you will be able to access it via `<YOUR_APP_NAME>-<YOUR_ORG_NAME>.koyeb.app`.
 

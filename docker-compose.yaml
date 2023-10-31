@@ -2,6 +2,6 @@ services:
   web:
     build: .
     ports:
-      - "2000:5000"
+      - "${PORT}:5000"
   redis:
     image: "redis:alpine"
