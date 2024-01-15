@@ -28,3 +28,4 @@ jobs:
           git-builder: docker
           git-docker-dockerfile: Dockerfile.koyeb
           privileged: true
+          skip-cache: true
