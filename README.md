@@ -1,4 +1,4 @@
-[![example-docker-compose](https://github.com/koyeb/example-docker-compose/actions/workflows/deploy.yaml/badge.svbuttong)](https://github.com/koyeb/example-docker-compose/actions)
+[![example-docker-compose](https://github.com/koyeb/example-docker-compose/actions/workflows/deploy.yaml/badge.svg)](https://github.com/koyeb/example-docker-compose/actions)
 
 <div align="center">
   <a href="https://koyeb.com">
