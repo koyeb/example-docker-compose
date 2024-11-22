@@ -1,7 +1,22 @@
+---
+version: "3.7"
 services:
-  web:
-    build: .
-    ports:
-      - "${PORT}:5000"
-  redis:
-    image: "redis:alpine"
+  ts-nginx-test:
+    image: tailscale/tailscale:latest
+    container_name: ts-nginx-test
+    hostname: nginx-test
+    #environment:
+      - TS_AUTHKEY=tskey-auth-kcdoF2de3F11CNTRL-9VhZEtnSGmECsXR5LY4BmE8o9RXFx7SWW
+      - TS_EXTRA_ARGS=--advertise-tags=tag:container
+      - TS_STATE_DIR=/var/lib/tailscale
+    volumes:
+      - ${PWD}/ts-nginx-test/state:/var/lib/tailscale
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - net_admin
+      - sys_module
+    restart: unless-stopped
+  nginx-pid-test1:
+    image: nginx
+    container_name: nginx-pid-test1
+    network_mode: service:ts-nginx-test
